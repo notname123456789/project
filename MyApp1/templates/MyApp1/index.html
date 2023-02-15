@@ -1,0 +1,140 @@
+
+<html>
+<head>
+  <title>getElementById example</title>
+</head>
+<body keydown = "move" id = "by">
+
+<div id="player"></div>
+<div id="bullet"></div>	
+
+
+</body>
+
+
+  	 
+  </script>
+
+  <style>
+  	#player
+  	{
+  	   height: 40px;
+  	   width: 40px;
+       background: green;
+       position: relative ;
+       top: 10px;
+       left: 10px;
+       right: 10px;
+       bottom: 10px
+  	}
+  	#bullet
+  	{
+ 	   height: 10px;
+  	   width: 10px;
+       background: red;
+       position: relative ;
+       top: 20px;
+       left: 20px;
+       right: 10px;
+       bottom: 10px
+  	}
+
+  </style>
+
+  <script>
+var y = 10 ;
+var z = 10 ;
+var y_2 = 20 ;
+var z_2 = 20 ;
+
+
+window.addEventListener("keypress" , checkKeyPress , false);
+ function checkKeyPress (key)
+{
+
+	if (key.keyCode == 97)
+	{
+	z-=10;
+    var x = document.getElementById('player');
+    x.style.left = z + "px" ;    
+	}
+	
+  	if (key.keyCode == 100)
+	{
+	z+=10;
+    var x = document.getElementById('player');
+    x.style.left = z + "px" ;    
+	}
+
+    if (key.keyCode == 115)
+	{
+	y+=10; 	
+    var x = document.getElementById('player');
+    x.style.top = y + "px" ;    
+	}
+
+	if (key.keyCode == 119)
+	{
+	y-=10;	
+	var x = document.getElementById('player');
+    x.style.top = y + "px" ;
+	}     
+console.log (y);
+console.log (z);                          
+}
+
+ window.onload = function run()
+{	
+
+class bulletxd 
+{    
+	constructor (color , left)
+	{
+var bullet;
+bullet = document.createElement ("div") ;
+var by = document.getElementById ("by");
+by.appendChild(bullet);
+bullet.style.position = "relative";
+bullet.style.top = "25px" ;
+bullet.style.left = left;
+bullet.style.width = "10px";
+bullet.style.height = "10px";
+bullet.style.background = color;
+
+	}
+
+dma ()
+{
+if 
+(
+this.bullet.style.top < document.getElementById('player').style.top)
+{
+console.log ("yeeeees");
+}
+}
+
+
+};
+
+ 
+
+
+
+ 	
+function spawn ()
+{
+let bb = new bulletxd ("red" , "55px");
+let bb_2 = new bulletxd ("blue" , "40px");
+setInterval (bb.dma() , 1111);
+}
+setInterval (spawn , 10000);
+
+}
+
+
+
+ 
+
+</script>
+</html>
+

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/maincss1.css'%}">
+    <script type="text/javascript" src="{% static 'js/aloha.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bs.js' %}"></script>
+    <script src="{% static 'jquery_min.js'%}"></script>
+</head>
+<body>
+    <img src="../static/media/img/images.jpg">
+    <p><input type="button" name="back"><h1><a href="{% url 'hi' %}">назад</a></h1></p>
+    <div id="products_id">
+    {% for el in product_on_site %}
+    <div id="pr_bs{{el.id}}">
+    <h3>{{ el.name }}</h3> <b><p>{{ el.price }}</p></b> <b><p>{{ el.sum }}</p></b>
+    <hr/>
+    <img src="../{{el.image}}">
+    {{el.image}}
+    <hr/>        
+            <p>{{el.descp}}</p>    
+     <hr/>   
+        <hr/>
+        <a href="{%url 'product_desp' el.id%}" >просмотр</a>
+        <input type="button" value="mybutton1" onclick="alarma({{el.id}})">    
+        <form method="post">
+              {% csrf_token %}
+              <button name="to_basket" value="{{el.id}}" type="submit"> В корзину эту хрень </button>
+        </form>
+        <hr/>
+    </div>
+    {%endfor%}
+      </div>
+   <b hidden> adвыа</b>
+
+    {% for i in data.arr %}
+    <a href="{{i}}">{{i}}</a>
+    {%endfor%}
+</body>
+</html>

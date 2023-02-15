@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/maincss1.css'%}">
+    <script type="text/javascript" src="{% static 'js/aloha.js' %}"></script>
+    <script src="{% static 'jquery_min.js'%}"></script>
+
+</head>
+<body>
+    
+    <h1>GG</h1>
+    <hr/>
+    {%block content%}
+
+    {% endblock %}
+    <hr/>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laboru.счямсмсмччямссчсч</p>
+    <a href="{% url 'index' %}">some</a>
+    <a href="{% url 'products' 1 %}">products</a>
+    <a href="{% url 'second' %}">second</a>
+    <a href="{%url 'basket'%}" >basket</a>
+    <a href="second/">второе приложение *ЖАНГО</a>
+    <a href="th/">aaaaaaaaaaaaaaaaaaaaaaaa</a>
+    {# <a href="{% url 'product_desp' %}">description</a> #}
+    <a href="admin">АДМИНКА</a>
+    <div id="realtime">ggg</div>
+    {{obj.time}}
+    {{obj.text}}
+    {% for el in product_on_site %}
+    <div><h3>{{ el.image }}</h3> </div>      
+    {%endfor%}
+
+    
+   
+    
+   
+    <div style="border:3px #000000 solid;">
+     <form method="post">
+         {% csrf_token %}
+         {{ obj.form.name }}
+         <br />
+         {{ obj.form.surname }}
+         <br />
+         {{ obj.form.email }}
+         <br />
+         {{ obj.form.password }}
+         <span>{{ obj.error }}</span>
+         <button type="submit" >ОТПРАВИТЬ</button>
+     </form>
+
+        <form method="get">
+              {% csrf_token %}
+              <button type="submit" name="spam" value="do_it" >ТЫК!</button>
+        </form>
+
+       <script type="text/javascript"> $(document).ready( function(){ $("#jqtest").html("JQuery installed successfully!"); } ); </script> <p id="jqtest"></p>
+    </div>
+</body>
+</html>
+
+{#коменты сюды (g!27qtn4DhKk35S)#}

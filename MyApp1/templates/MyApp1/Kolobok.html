@@ -1,0 +1,11 @@
+﻿
+
+{% extends 'MyApp1/main.html' %}
+{% load static %}
+{%block content%}
+<h1>The best story about Kolobok</h1>
+<img src="{% static 'media/img/images.jpg' %}"/>
+<p>some story</p>
+{% include 'MyApp1/part2.html' %}
+{% include 'MyApp1/part2.html' %}
+{% endblock %}

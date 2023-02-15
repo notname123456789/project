@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <header>Страница описания товара</header>
+    <nav><a href="{% url 'products' %}">назад</a></nav>
+
+    <article>
+        <section>
+            <!--    сюды описание    -->
+            {{pr}}
+            <img src="../{{pr.image}}">
+        </section>
+    </article>
+
+    <aside>
+    <a href="{% url 'index' %}">some</a>
+    <a href="{% url 'products'%}">products</a>
+    <a href="{% url 'second'%}">second</a>
+    <a href="admin">an</a>
+    </aside>
+
+    <footer>
+        <table>
+
+            <tr>
+                <td><h4>VK</h4></td>
+                <td><h4>Facebook</h4></td>
+                <td><h4>Доп.соцсеть</h4></td>
+            </tr>
+
+            <tr>
+                <td>отзывы</td>
+                <td>помощь</td>
+                <td>политика</td>
+            </tr>
+
+            <tr>
+                <td>насколько всё плохо?</td>
+                <td>гарантия</td>
+                <td>обратная связь</td>
+            </tr>
+
+        </table>
+    </footer>
+</body>
+</html>

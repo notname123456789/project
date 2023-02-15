@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <div class="top" align="center"><a href="{% url 'second' %}">Назад!</a></div>
+    <!--_________________________________________________________________-->
+    <form class="decor" method="post">
+        {% csrf_token %}
+        <div class="form-left-decoration"></div>
+        <div class="form-right-decoration"></div>
+        <div class="circle"></div>
+        <div class="form-inner">
+            <h3>Добро пожаловать! Сдесь можно предложить свою новость на сайт</h3>
+            {{form_out.name}}
+            {{form_out.descp}}
+            <input type="submit" value="Отправить">
+        </div>
+    </form>
+    <!--_________________________________________________________________-->
+</body>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url("http://dogvozdya.ru/images/goods/ac/5f/dd80c3eaccdcbf04861626f928e433198eb0518d88f4759d9f2d48e23a35.jpg")
+    }
+
+    .decor {
+        position: relative;
+        max-width: 400px;
+        margin: 50px auto 0;
+        background: white;
+        border-radius: 30px;
+    }
+
+    .form-left-decoration, .form-right-decoration {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 20px;
+        background: #66FCF1;
+        border-radius: 20px;
+    }
+
+    .form-left-decoration {
+        bottom: 60px;
+        left: -30px;
+    }
+
+    .form-right-decoration {
+        top: 60px;
+        right: -30px;
+    }
+
+        .form-left-decoration:before, .form-left-decoration:after, .form-right-decoration:before, .form-right-decoration:after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            border-radius: 30px;
+            background: white;
+        }
+
+    .form-left-decoration:before {
+        top: -20px;
+    }
+
+    .form-left-decoration:after {
+        top: 20px;
+        left: 10px;
+    }
+
+    .form-right-decoration:before {
+        top: -20px;
+        right: 0;
+    }
+
+    .form-right-decoration:after {
+        top: 20px;
+        right: 10px;
+    }
+
+    .circle {
+        position: absolute;
+        bottom: 80px;
+        left: -55px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .form-inner {
+        padding: 50px;
+    }
+
+        .form-inner input, .form-inner textarea {
+            display: block;
+            width: 100%;
+            padding: 0 20px;
+            margin-bottom: 10px;
+            background: #E9EFF6;
+            line-height: 40px;
+            border-width: 0;
+            border-radius: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+            .form-inner input[type="submit"] {
+                margin-top: 30px;
+                background: #66FCF1;
+                border-bottom: 4px solid #F4976C;
+                color: white;
+                font-size: 14px;
+            }
+
+        .form-inner textarea {
+            resize: none;
+        }
+
+        .form-inner h3 {
+            margin-top: 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            color: #707981;
+        }
+
+    .top {
+        width: 150px;
+        height: 50px;
+        border: 3px solid #303C6C; /* Белая рамка */
+        border-radius: 10px; /* Радиус скругления */
+        box-shadow: 1px 0 3px rgb(0 0 0 / 30%);
+    }
+
+        .top a {
+            text-decoration: none;
+            outline: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-family: Cambria, Georgia, serif;
+            letter-spacing: 1px;
+            color: #303C6C;
+            display: inline-block;
+            font-weight: bold;
+            align-content: center;
+        }
+</style>
+</html>

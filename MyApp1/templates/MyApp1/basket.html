@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="{% static 'js/bs.js' %}"></script>
+    <title>корзина</title>
+</head>
+<body>
+    <div id="fin">
+        <h1 align ="center" >ВАШИ ТОВАРЫ <s>( *хотя пока еще мои . . . )</s></h1>
+        {%for el in pib %}
+        <hr />
+        <h2>{{el}}</h2>
+         <img src="../{{el.image}}">
+        <hr />
+        {%endfor%}
+    </div>
+</body>
+</html>

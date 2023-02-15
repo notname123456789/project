@@ -1,0 +1,274 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% load static %}
+<html>
+<head>
+    <title>Главная страница</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+<script>
+function foo()
+    {
+scrollTo(0,0);
+    }
+</script>
+ 
+</head>
+
+
+
+<body id="bod">
+<button  onclick="foo()" class="top"><font color="black">^</font></button>
+  
+<header id="hea">
+	<img height="160" width="160" src="../../static/media/s.jpg" id="pic" /> 
+	<h1 align="center"><font face="fantasy" color="#303C6C">НОВОСТНОЙ САЙТ 11 "А" КЛАССА</font> </h1>
+</header>
+
+<nav>
+<a class="finally" href="#foo">Информация</a>
+<a class="finally" href="#s1">новость1</a>
+<a class="finally" href="#s2">новость2</a>
+<a class="finally" href="#s3">новость3</a>
+<a class="finally" href="../admin">an</a>
+</nav>
+
+<article id="art">
+
+<section class="s">
+<h2 align="center"><font face="fantasy" color="#303C6C">Открылся Новостной сайт 11А класса</font> </h2>
+<div align="center"><img src="../../static/media/110.jpg"/> </div>
+</section>
+
+<section class="s">
+    <hr />
+
+          {% for el in product_on_site %}
+       {% with kostil=forloop.counter%}
+       <div id="s{{kostil}}">
+
+           <font face="fantasy" color="#303C6C"><h3 align ="center">{{ el.name }}</h3></font> 
+           <p class="p">{{el.descp}}</p>
+          <img  max-width ="32px" src="../{{el.image}}">
+           <br />
+           <hr />
+       </div>     
+        {% endwith %}
+          {%endfor%}
+
+
+</section>
+<div>
+{% for i in amount %}
+<a href="{{i}}">{{i}}</a>
+{%endfor%}
+</div>
+
+</article>
+
+<aside id="asi">
+    <div class="finally_2"><h3><a href="{% url 'np' %}">предложить новость</a></h3></div>
+    <div class="finally_2"><h3><a href="{% url 'pr' %}">Войти</a></h3></div>
+    <div class="finally_2"><h3><a href="{% url 'rt' %}">достижения класса</a></h3></div>
+</aside>
+
+<footer id="foo">
+	
+<p>
+<table>
+  <tr>
+    <td> <p>Наш адрес:</p><p>г.Новосибирск</p><p>ул.Кропоткина 265</p> <p>Проезд</p> <p>автобус 1103, 1189, маршрутное такси 1013 (остановка «Магазин № 21»)
+троллейбус 13, автобус 1030, 1444, маршрутное такси 19, 1202, 1144 (остановка «ж/м Плехановский»).</p> <p></p></td>
+    <td><p>Классный Руководитель:</p> <p>Прокопенко Оксана Павловна, учитель физической культуры высшей квалификационной категории</p> <p>Президент класса:</p> <p>Вязникова Юлия</p></td>
+  </tr>
+
+</table>
+</p>
+</footer>
+
+ <script src="{% static 'jquery_min.js'%}"></script>
+ <script src="../../static/js/JavaScript.js"></script>
+
+    <style>
+@font-face {
+   font-family: "fname"; 
+   src: url("let.ttf"); 
+}
+
+
+
+
+body {
+background-image: url("http://dogvozdya.ru/images/goods/ac/5f/dd80c3eaccdcbf04861626f928e433198eb0518d88f4759d9f2d48e23a35.jpg");
+/*background-repeat: no-repeat;*/
+}
+
+.finally {
+    color: #303C6C;
+    font-size: 19px;
+    background: #fff3d0a6;
+    border-radius: 10px;
+    margin-left: 10px;
+        }
+.finally_2 {
+    color: #303C6C;
+    font-size: 19px;
+    background: #fff3d0a6;
+    border: 3px solid #41b3a3;
+    border-radius: 10px;
+    margin-top: 10px;
+        }
+header 
+{
+   border-color: #41B3A3; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+    padding: 5px; /* Поля вокруг текста */
+   width: 99%;
+   height: 155px;
+   background-color: #FBE8A6 ;
+}
+
+nav 
+{
+   border-color: #41B3A3; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+    padding: 5px; /* Поля вокруг текста */
+   width: 99%;
+   height: 75px;
+   background-color: #FBE8A6 ;
+   margin-top: 14px;
+   border-radius: 10px
+}
+
+article
+{
+    border-color: #41B3A3; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+    padding: 5px; /* Поля вокруг текста */
+   width: 81%;
+   height: 2000px;
+   float : right;
+   margin-top: 25px;
+background-color: #FBE8A6 ;
+
+}
+
+
+aside
+{  
+   border-color: #41B3A3; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+    padding: 5px; /* Поля вокруг текста */
+   width: 15%;
+   height: 2000px;
+   margin-top: 25px;
+background-color: #FBE8A6 ;
+border-radius: 10px
+}
+
+section
+{
+   border-color: #41B3A3; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+    padding: 5px; /* Поля вокруг текста */ 
+   width: 98%;
+margin-top: 25px;
+margin-left: 10px;
+background-color: #FBE8A6 ;
+border-radius: 10px
+}
+
+
+
+footer
+{
+   border-color: #41B3A3; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+    padding: 5px; /* Поля вокруг текста */   
+   width: 99%;
+   margin-top: 25px;
+background-color: #FBE8A6 ;
+}
+
+.top
+{
+   position: fixed;
+   right : 30px;
+   bottom : 50px;
+}
+
+p{width:1000; color:#303C6C ; font-size: 14pt ; }
+a {color:#303C6C}
+button {border-radius: 60%; background-color:#66FCF1; font-size: 15pt}
+h1{font-family: 'fname' ; margin-left: 110px;}
+#pic {float: left; border: 5px solid black;}
+
+
+.fc 
+{
+   width:100px;
+   height:100px;
+   border-color: #41B3A3; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+    padding: 5px; /* Поля вокруг текста */
+    border-radius: 10px
+}
+
+          .box {                      
+        height: 300px;
+        display: flex;
+       /*flex-direction: column;*/
+       /*flex-wrap: wrap;*/ 
+    }
+    .box>* {
+        /*flex: 1 1 80px;*/
+        border-color: #41B3A3; /* Цвет границы */
+        border-style: solid; /* Стиль границы */  
+        padding: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 10px
+    }
+
+    img {
+  max-width: 90%;
+  max-height: 90%;
+}
+    </style>
+
+</body>
+</html>
+
+<!-- 
+    <form method="post" id="second">
+        #{#{form_out.name}}#
+        #{#{form_out.kind_of}}#
+        #{% csrf_token %}#
+        <button type="submit" id="sub" value="btn_val">nsr</button>
+    </form>
+
+            <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Seven</div>
+        <div>Eight</div>
+        <div>Nine</div>
+        <div>Ten</div>
+      </div>
+#s1 
+{
+height: 500px;
+border-radius: 10px
+}
+
+#s2 
+{
+height: 1400px;   
+border-radius: 10px
+}
+
+-->

@@ -1,0 +1,186 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>DjangoWebProject3</Name>
+    <RootNamespace>DjangoWebProject3</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>be8eb4f7-3105-426d-a3c9-072d9448a349</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>DjangoWebProject3.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app_3\admin.py" />
+    <Compile Include="app_3\apps.py" />
+    <Compile Include="app_3\migrations\__init__.py" />
+    <Compile Include="app_3\models.py" />
+    <Compile Include="app_3\tests.py" />
+    <Compile Include="app_3\urls.py" />
+    <Compile Include="app_3\views.py" />
+    <Compile Include="app_3\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="DjangoWebProject3\__init__.py" />
+    <Compile Include="DjangoWebProject3\settings.py" />
+    <Compile Include="DjangoWebProject3\urls.py" />
+    <Compile Include="DjangoWebProject3\wsgi.py" />
+    <Compile Include="MyApp1\admin.py" />
+    <Compile Include="MyApp1\apps.py" />
+    <Compile Include="MyApp1\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyApp1\migrations\__init__.py" />
+    <Compile Include="MyApp1\models.py" />
+    <Compile Include="MyApp1\some1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyApp1\tests.py" />
+    <Compile Include="MyApp1\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyApp1\views.py" />
+    <Compile Include="MyApp1\__init__.py" />
+    <Compile Include="MyApp2\admin.py" />
+    <Compile Include="MyApp2\apps.py" />
+    <Compile Include="MyApp2\forms.py" />
+    <Compile Include="MyApp2\migrations\__init__.py" />
+    <Compile Include="MyApp2\models.py" />
+    <Compile Include="MyApp2\tests.py" />
+    <Compile Include="MyApp2\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyApp2\views.py" />
+    <Compile Include="MyApp2\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app_3\static\js\JavaScript.js" />
+    <Content Include="app_3\templates\app_3\index.html" />
+    <Content Include="MyApp1\static\css\maincss1.css" />
+    <Content Include="MyApp1\static\js\aloha.js" />
+    <Content Include="MyApp1\static\js\bs.js" />
+    <Content Include="MyApp1\static\js\sk_for_bsk.js" />
+    <Content Include="MyApp1\static\media\img\images.jpg" />
+    <Content Include="MyApp1\templates\MyApp1\basket.html" />
+    <Content Include="MyApp1\templates\MyApp1\index.html" />
+    <Content Include="MyApp1\templates\MyApp1\main.html" />
+    <Content Include="MyApp1\templates\MyApp1\Kolobok.html" />
+    <Content Include="MyApp1\templates\MyApp1\part2.html" />
+    <Content Include="MyApp1\templates\MyApp1\products.html" />
+    <Content Include="MyApp1\templates\MyApp1\product_desp.html" />
+    <Content Include="MyApp2\static\js\JavaScript.js" />
+    <Content Include="MyApp2\static\media\2.jpg" />
+    <Content Include="MyApp2\static\media\img.jpg" />
+    <Content Include="MyApp2\static\media\let.ttf" />
+    <Content Include="MyApp2\static\media\logo.jpg" />
+    <Content Include="MyApp2\templates\MyApp2\index.html" />
+    <Content Include="MyApp2\templates\MyApp2\list.html" />
+    <Content Include="MyApp2\templates\MyApp2\np.html" />
+    <Content Include="MyApp2\templates\MyApp2\privilege.html" />
+    <Content Include="MyApp2\templates\MyApp2\pvn1.html" />
+    <Content Include="MyApp2\templates\MyApp2\pvy.html" />
+    <Content Include="MyApp2\templates\MyApp2\rating.html" />
+    <Content Include="MyApp2\templates\MyApp2\rt_plus.html" />
+    <Content Include="MyApp2\templates\MyApp2\тест.html" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app_3\" />
+    <Folder Include="app_3\migrations\" />
+    <Folder Include="app_3\static\" />
+    <Folder Include="app_3\static\css\" />
+    <Folder Include="app_3\static\js\" />
+    <Folder Include="app_3\static\media\" />
+    <Folder Include="app_3\templates\" />
+    <Folder Include="app_3\templates\app_3\" />
+    <Folder Include="DjangoWebProject3\" />
+    <Folder Include="MyApp1\" />
+    <Folder Include="MyApp1\migrations\" />
+    <Folder Include="MyApp1\static\js\" />
+    <Folder Include="MyApp1\static\css\" />
+    <Folder Include="MyApp1\static\media\img\" />
+    <Folder Include="MyApp1\static\media\audio\" />
+    <Folder Include="MyApp1\static\media\" />
+    <Folder Include="MyApp1\static\media\video\" />
+    <Folder Include="MyApp1\templates\" />
+    <Folder Include="MyApp1\templates\MyApp1\" />
+    <Folder Include="MyApp1\static\" />
+    <Folder Include="MyApp2\" />
+    <Folder Include="MyApp2\migrations\" />
+    <Folder Include="MyApp2\static\" />
+    <Folder Include="MyApp2\static\js\" />
+    <Folder Include="MyApp2\static\css\" />
+    <Folder Include="MyApp2\static\media\" />
+    <Folder Include="MyApp2\templates\" />
+    <Folder Include="MyApp2\templates\MyApp2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

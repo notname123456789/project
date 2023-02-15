@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>рейтинг класса</title>
+</head>
+
+<body>
+    <div class="top" align="center"><a href="{% url 'second' %}">Назад!</a></div>
+
+    {% for el in strt %}
+    
+        <div class="ncl">     
+        <h3><font face="fantasy" color="#303C6C">Имя - {{ el.name }} </font> 
+        <font face="fantasy" color="#303C6C">Фамилия - {{ el.surname }}</font> <a href="{%url 'rt_plus' el.id%}"><font face="fantasy" color="#303C6C" style="margin-left:500px">>Просмотр профиля<</font></a> </h3>
+        <hr />
+        </div> 
+
+    
+    {%endfor%}
+
+</body>
+
+<style>
+    body {
+        background-image: url("http://dogvozdya.ru/images/goods/ac/5f/dd80c3eaccdcbf04861626f928e433198eb0518d88f4759d9f2d48e23a35.jpg");
+    }
+.ncl
+{
+   border-color: #41B3A3; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+    padding: 5px; /* Поля вокруг текста */ 
+   width:fit-content;
+margin-top: 25px;
+margin-right: 3px;
+background-color: #FBE8A6 ;
+border-radius: 10px
+}
+
+.cl
+{
+    border-color: #41B3A3; /* Цвет границы */
+    border-style: solid; /* Стиль границы */
+    padding: 5px; /* Поля вокруг текста */
+   width: 34%;
+   height: 2000px;
+   float : left;
+   margin-top: 25px;
+background-color: #FBE8A6 ;
+
+
+}
+
+p{width:1000; color:#303C6C ; font-size: 14pt ; }
+
+.top {
+        width: 150px;
+        height: 50px;
+        border: 3px solid #303C6C; /* Белая рамка */
+        border-radius: 10px; /* Радиус скругления */
+        box-shadow: 1px 0 3px rgb(0 0 0 / 30%);
+    }
+
+        .top a {
+            text-decoration: none;
+            outline: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-family: Cambria, Georgia, serif;
+            letter-spacing: 1px;
+            color: #303C6C;
+            display: inline-block;
+            font-weight: bold;
+            align-content: center;
+        }
+
+
+</style>
+
+</html>
+
